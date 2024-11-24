@@ -7,7 +7,7 @@ const path=require("path");
 const staticRouter=require("./routes/staticRouter");
 
 const app=express();
-const port=8002;
+const port=Process.env.PORT||8002;
 
 connectMongoDb('mongodb://127.0.0.1:27017/short-url')
 .then(()=>{
